@@ -3,7 +3,7 @@ var app = new Vue({
   data: {
     product: 'New Car',
     image:'./img/bmw.jpg',
-    inStock:10,
+    inStock:0,
     details:['red','auto','BMW'],
     variants:[
     {
