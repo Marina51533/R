@@ -17,3 +17,7 @@
 .product_image{
   margin:0 5vw 10vh 3vw;
 }
+.product_image img{
+  height: 300px;
+  width: 400px;
+}
