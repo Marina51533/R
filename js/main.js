@@ -13,15 +13,32 @@ const app= new Vue({
       {
         variantId:2345,
         variantColor:'blue',
+        variantImage:'./img/blue.png'
       },
       {
         variantId:2444,
         variantColor:'red',
+        variantImage:'./img/red_car.jpg'
       },
       {
-        variantId:2444,
+        variantId:4454,
         variantColor:'yellow',
+        variantImage:"./img/yellow.jpg"
       },
-    ]
+      {
+        variantId:2554,
+        variantColor:'green',
+        variantImage:"./img/green.jpg"
+      },
+    ],
+    cart:0,
+  },
+  methods:{
+    addToCart: function (){
+      this.cart+=1
+    },
+    updateProduct: function (variantImage){
+      this.image= variantImage
+    }
   }
 })

@@ -18,3 +18,27 @@
   padding:20vh;
   flex-wrap: wrap;
 }
+.product-info{
+  width:40vw;
+ 
+}
+.wrapper-btn{
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+
+  height: 49px;
+}
+button{
+  background-color: rgb(9, 102, 223);
+  padding: 7px;
+  border: 1px solid blue;
+  border-radius: 13px;
+}
+.cart{
+ 
+  padding: 15px;
+  border:1px solid rgb(226, 226, 226);
+  text-align: center;
+  border-radius: 10px;
+}
