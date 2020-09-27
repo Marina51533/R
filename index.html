@@ -1,55 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel='stylesheet' type='text/css' href='css/style.css'>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <title>New Vue Project</title>
+  <meta charset="UTF-8"> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' href='css/style.css'> <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>New Vue3 Project</title>
 </head>
+
 <body>
-  <div class='nav_bar'></div>
+ <div class='nav_bar'></div>
 
   <div id="app">
-   <div class='product'>
-      <div class='product_image'>
-        <img v-bind:src='image'>
-      </div>
-    
-      <div class='product_info'>
-        <h1>{{title}}</h1>
-        <p v-if='inStock>10'>In Stock!</p>
-        <p v-else-if='inStock <= 10 && inStock >0'>Almost out of Sold!</p>
-        <p v-else
-        :class='{textDecoration:!inStock}'>Out of stock(((</p>
-        <ul v-for='detail in details'>
-          <li>{{detail}}</li>
-        </ul>
-        
-        <div v-for='(variant, index) in variants'
-        :key='variant.variantId'
-        class='color-box'
-        :style='{backgroundColor:variant.variantColor}'
-        @mouseover='updateProduct(index)'>
-        
-        </div>
-       
-        <button v-on:click="addToCart"
-         :disabled='!inStock'
-         :class='{disabledButton:!inStock}'
-      >Add to cart</button>
-        <div class="cart">
-          <p>Cart({{cart}})</p>
-        </div>
-      </div>
-    </div>
+    <h1>{{ product }}</h1>
+    <p>{{ describtion}}</p>
   </div>
 
 
 
 
-</body>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src='js/main.js'></script>
+<script>
+  const mountApp = app.mount('#app')
+</script>
+ 
+</body>
+
+  
 </html>
