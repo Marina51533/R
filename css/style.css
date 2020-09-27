@@ -10,4 +10,11 @@
 .product-image img{
   height: 300px;
   width: 350px;
+  
+}
+#app{
+  display: flex;
+  justify-content: space-around;
+  padding:20vh;
+  flex-wrap: wrap;
 }
